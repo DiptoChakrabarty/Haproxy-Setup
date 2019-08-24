@@ -3,6 +3,6 @@
 192.168.43.28  ansible_user=root   ansible_password=redhat
 
 [lb]
-192.168.43.182  ansible_user=root   ansible_password=redhat
+192.168.43.224  ansible_user=root   ansible_password=redhat
 
 

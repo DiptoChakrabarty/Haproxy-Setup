@@ -11,6 +11,6 @@
      state: started
 - firewalld:
      permanent: yes
-     port: 8080/tcp
      immediate: yes
      state: enabled
+     port: 80/tcp
