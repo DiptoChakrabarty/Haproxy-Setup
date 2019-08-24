@@ -1,0 +1,16 @@
+---
+# tasks file for web
+- package: 
+     name: 'httpd'
+     state: present
+- copy:
+     content: "This is {{ansible_default_ipv4.address}}"
+     dest: /var/www/html/index.html
+- service: 
+     name: 'httpd'
+     state: started
+- firewalld:
+     permanent: yes
+     port: 8080/tcp
+     immediate: yes
+     state: enabled

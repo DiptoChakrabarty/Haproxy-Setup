@@ -1,0 +1,6 @@
+- hosts: localhost
+  tasks:
+   - debug:
+           msg: "This is {{item}} "
+     loop:
+             - "{{groups['web']}}"

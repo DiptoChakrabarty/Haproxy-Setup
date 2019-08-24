@@ -1,0 +1,19 @@
+---
+# tasks file for lb
+#
+- package: 
+     name: 'haproxy'
+     state: present
+- template:
+        src: haproxy.cfg.j2
+        dest: /etc/haproxy/haproxy.cfg
+- firewalld:
+        state: enabled
+        port: 8080/tcp
+        permanent: yes
+        immediate: yes
+- service:
+     name: 'haproxy'
+     state: restarted
+
+
